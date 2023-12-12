@@ -1,0 +1,128 @@
+body {
+    background-image: url(/images/christmas/mainpic.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: gold;
+}
+
+h3 {
+    color: rgb(221, 80, 62);
+    font-size: 50px;
+    position: absolute;
+    top: 350px;
+    left: 30%;
+    font-family:fantasy;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.457);
+    width: 100%;
+    padding: 5px 0;
+}
+
+.logo img {
+    height: 150px; 
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    margin: 15px;
+  }
+
+  .btn:hover {
+    background-color: #e64a19;
+  }
+
+.para {
+    position: absolute;
+    top: 1000px;
+    text-align: center;
+    margin: 20px;
+}
+
+.footer {
+    background-color: #0000007e;
+    text-align: center;
+    padding: 20px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.album_imgs_section{
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+} 
+
+.slide_section{
+    width: 500%;
+    height: auto;
+    display: flex;
+    
+    
+}
+
+.slide_section input{
+    display: none;
+    
+}
+
+.slide{
+    width: 20%;
+    transition: 1s cubic-bezier(0.66, -0.02, 0.24, 1);
+    
+}
+
+.slide first{
+    width: 70%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: 0;
+    animation: 15s slide infinite;
+}
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+
+}
+

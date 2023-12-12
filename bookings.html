@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking page
+    </title>
+    <link rel="stylesheet" href="/css/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        intergrity="sha512-xh60/ckQoPOWDdYTDqeRdPCVd15pvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCeJHgXloTyT2A=="
+        crossorigin="anonymous" reffererpolicy="no-referrer" /> 
+        <script src="main.js" defer></script>
+    <header class="main_navigation" >
+        <section class="navigetion_bar">
+
+            <input type="checkbox" class="menu_bar">
+            <label for="menu_bar">MENU</label>
+
+            <nav class = "navbar">
+                <section class="main-logo">
+                    <a href="/index.html"><img src="/images/home/Main_logo.png" alt="hotel logo"></a>
+                </section>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/branches.html">Branch</a></li>
+                    <li><a href="/adventures.html">Adventure</a></li>
+                    <li class="drop_down"><a href="/resturants.html">Restaurants</a>
+                        <ul>
+                            <li><a href="/halloween.html" class="fist_part">Halloween Party</a></li>
+                            <li><a href="/christmas.html" class="second_part">Christmas Party</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/bookings.html">Bookings</a></li>
+
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+<body>
+    <h1 class="bodyHeader">Bookings</h1>
+    <div class="form-container">
+
+        <form id="booking_form">
+                <h1>Room Booking</h1>
+            <div class="fields">
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="name" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="check-in">Check-in Date:</label>
+                    <input type="date" class="check-in" id="check-in" name="check-in" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="check_out">Check-out Date:</label>
+                    <input type="date" min="today" class="check_out" id="check_out" name="check_out" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="single-rooms">Single Rooms: </label>
+                    <input type="number" min="0" class="single-rooms" id="single-rooms" name="single-rooms">
+                </div>
+                <div class="form-group">
+                    <label for="double-rooms">Double Room: </label>
+                    <input type="number" min="0" class="double-rooms" id="double-rooms" name="double-rooms">
+                </div>
+                <div class="form-group">
+                    <label for="triple-room">Triple Room: </label>
+                    <input type="number" min="0" class="triple-room" id="triple-room" name="triple-room">
+                </div>
+
+                <div class="form-group">
+                    <label for="Number-of-Adults">Number of Adults: </label>
+                    <input type="number" min="0" class="Number-of-Adults" id="Number-of-Adults" name="Number-of-Adults">
+                </div>
+
+                <div class="form-group">
+                    <label for="Number-of-children">Number of children: </label>
+                    <input type="number" min="0" class="Number-of-children" id="Number-of-children"
+                        name="Number-of-children">
+                </div>
+
+                <div class="form-group">
+                    <label for="mealskids">Meals For Kids Under 5 Years: </label>
+                    <input type="number" min="0" class="Meals-Kids" id="Meals-Kids" name="Meals-Kids">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="extra_requirements">Extra Requirements: </label>
+                    <class="extra_requirements" id="extra_equirements" name="extra_requirements" required><br><br>
+                        <input type="checkbox" name="WiFi" id="WiFi">
+                        <label for="WiFi">WiFi</label><br>
+                        <input type="checkbox" name="Pool-view" id="Pool-view">
+                        <label for="Pool-view">Pool view</label><br>
+                        <input type="checkbox" name="Garden-view" id="Garden-view">
+                        <label for="Garden-view">Garden view</label><br>
+                        <input type="checkbox" name="extra-bed" id="extra-bed">
+                        <label for="extra-bed">Extra Bed</label><br>
+                </div><br><br>
+
+                <div class="form-group">
+                    <label for="promo-code">Enter your promo code: </label>
+                    <input type="text" class="promo-code" id="promo-code" name="promo-code">
+                </div> <br>
+
+                <div class="roombooking-popup">
+                    <button type="submit" class="book_btn" id="book_btn" onclick="openPopup()">BOOK NOW</button>
+                </div>
+            
+                <div class="popup" id="popup">
+                    <img src="/greentick.jpg" alt="greentick">
+                    <h2>Thank you ! </h2>
+                    <p>You have succesfully booked your accommadation.</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="add2fav2" class="add2fav2" name="add2fav2">ADD TO FAVOURITES</button>
+                </div>
+        
+            </div>
+        </form>
+
+        <form class="booking_form">
+                <h1>Adventure Booking</h1>
+            <div class="fields">
+
+                <div class="form-group">
+                    <label for="name">Name </label><br>
+                    <input type="text" class="nameadv" id="nameadv" name="nameadv" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adventure">Adventure </label><br>
+                    <select class="adventure" id="adventuredrop" name="adventure">
+                        <option value="diving" id="diving">Diving</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Number-of-LAdults">Number of Local Adults: </label><br>
+                    <input type="number" min="0" class="Number-of-LAdults" id="Number-of-LAdults"
+                        name="Number-of-LAdults">
+                </div>
+
+                <div class="form-group">
+                    <label for="Number-of-Lchildren">Number of Local children: </label><br>
+                    <input type="number" min="0" class="Number-of-Lchildren" id="Number-of-Lchildren"
+                        name="Number-of-Lchildren">
+                </div>
+
+                <div class="form-group">
+                    <label for="Number-of-FAdults">Number of Foriegn Adults: </label><br>
+                    <input type="number" min="0" class="Number-of-FAdults" id="Number-of-FAdults"
+                        name="Number-of-FAdults">
+                </div>
+
+                <div class="form-group">
+                    <label for="Number-of-Fchildren">Number of foreign children: </label><br>
+                    <input type="number" min="0" class="Number-of-Fchildren" id="Number-of-Fchildren"
+                        name="Number-of-Fchildren">
+                </div>
+
+                <div class="form-group">
+                    <span class="details">guide for diving</span> 
+                    
+                    <div class="dive-select">
+                        <div class="dive-adult">
+                            <label>
+                                <input type="checkbox" id="diveAdults">
+                                <span>Adults</span>
+                            </label>
+                        </div>
+
+                        <div class="dive-kids">
+                            <label>
+                                <input type="checkbox" id="diveKids">
+                                <span>Kids</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                    <div class="advbooking-popup">
+                        <button type="submit" class="bookadvbtn" id="bookadvbtn" onclick="openPopupadv()">BOOK ADVENTURE</button>
+                    </div>
+                
+                    <div class="popupadv" id="popupadv">
+                        <img src="/greentick.jpg" alt="greentick">
+                        <h2>Thank you ! </h2>
+                        <p>You have succesfully booked diving adventure.</p>
+                        <button type="button" onclick="closePopupadv()">OK</button>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="add2fav1" class="add2fav1" name="add2fav1">ADD TO FAVOURITES</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        
+        <div class="form-group loyaltyBox">
+            <button type="button" id="check-loyalty">CHECK LOYALTY POINTS</button>
+            <input type="text" class="loyalty" id="loyalty" name="loyalty">
+        </div><br>
+
+        <!-- current output -->
+        <section class="price">
+            <span>Total booking price</span><br>
+            <p id="booknowOutput"><u>LKR</u> 0.00</p>
+
+            <span>Total Adventure Price</span><br>
+            <p id="adventurebookingOutput"><u>LKR</u> 0.00</p>
+        </section>
+
+        <br>
+
+<section class="table-customer">
+    <div>Room bookings</div>
+        <table class="table overallTable" id="bookoverall">
+            <thead id="booklist">
+                <tr>
+                    <td>Name</td>
+                    <td>Check-In</td>
+                    <td>Check-Out</td>
+                    <td>Adults</td>
+                    <td>Children</td>
+                    <td>Above 5 years</td>
+                    <td>Single Room</td>
+                    <td>Double Rooms</td>
+                    <td>Triple Rooms</td>
+                    <td>WI-FI</td>
+                    <td>Pool View</td>
+                    <td>Garden View</td>
+                    <td>Extra Bed</td>
+                    <td>Promo Code</td>
+                    <td>Total Cost</td>
+                </tr>
+            </thead>
+            <tbody id="booktable">
+
+            </tbody>
+        </table>     
+</section>
+
+<br>
+
+<section class="table-customer">
+    <div>Adventure Booking</div>
+        <table class="table overallTable" id="adventureoverall">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Adventure</td>
+                    <td>Local adults</td>
+                    <td>Local kids</td>
+                    <td>Foreign adults</td>
+                    <td>Foreign kids</td>
+                    <td>Guide for diving (Adults)</td>
+                    <td>Guide for diving (Kids)</td>
+                    <td>Total cost</td>
+                </tr>
+            </thead>
+            <tbody id="advbooktable">
+            </tbody>
+        
+        </table>     
+</section>
+        <br>
+
+        <section class="totalprice">
+            <span>Overall total booking cost </span><br>
+            <p id="totbookOutput"><u>LKR</u> 0.00</p>
+        </section>
+
+    <div class="footercontainer">
+        <div class="socialicons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <div class="footernav">
+            <ul>
+                <li><a href="/index.html">index</a></li>
+                <li><a href="/branches.html">Branches</a></li>
+                <li><a href="/adventures.html">Adventures</a></li>
+                <li><a href="/resturants.html">Resturants</a></li>
+                <li><a href="/bookings.html">Bookings</a></li>
+            </ul>
+        </div>
+
+        <div class="footerbottom">
+            <p> Copyright & copy;2022</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

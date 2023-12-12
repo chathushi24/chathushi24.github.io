@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .footercontainer  {
+                position: absolute;
+                top: 700px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Velvet Skies</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        intergrity="sha512-xh60/ckQoPOWDdYTDqeRdPCVd15pvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCeJHgXloTyT2A=="
+        crossorigin="anonymous" reffererpolicy="no-referrer"/>
+    
+        <header class="main_navigation" class="main_navigation">
+            <section class="navigetion_bar">
+    
+                <input type="checkbox" class="menu-bar">
+                <label for="menu-bar">MENU</label>
+    
+                <nav class="navbar">
+                    <section class="main-logo">
+                        <a href="/index.html"><img src="/images/home/Main logo.png" alt="hotel logo"></a>
+                    </section>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/branches.html">Branches</a></li>
+                        <li><a href="/adventures.html">Adventure</a></li>
+                        <li class="drop_down"><a href="/resturants.html">Restaurants</a>
+                            <ul>
+                                <li><a href="/halloween.html" class="fist_part">Halloween Party</a></li>
+                                <li><a href="/christmas.html" class="second_part">Christmas Party</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/bookings.html">Bookings</a></li>
+                    
+                     </ul>
+                </nav>
+            </section>
+        </header>
+           
+    </head> 
+    <body>
+
+        <a href="/bookings.html" class="btn">back</a>
+        <div class="roombookings">
+
+        <div class="roomB">
+        
+        <div class="container">
+            <h1 class="hotel-room">Adventure Booking</h1>
+            <div class="body-room">
+            <form id="booking-form" action="submit_booking.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="adventure">Select Adventure:</label>
+                    <select id="adventure" name="adventure" required>
+                        <option value="hiking">surfing</option>
+                        <option value="kayaking">Kayaking</option>
+                        <option value="rock-climbing">jetskii</option>
+                    </select>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="message">Additional Comments:</label>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                </div><br><br>
+                <div class="form-group">
+                    <button type="submit">Submit Booking</button>
+                </div><br><br>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+</body>
+      
+<div class="footercontainer" >
+    <div class="socialicons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+<div class="footernav">
+    <ul>
+        <li><a href="/index.html">index</a></li>
+        <li><a href="/branches.html">Branches</a></li>
+        <li><a href="/adventures.html">Adventures</a></li>
+        <li><a href="/resturants.html">Resturants</a></li>
+        <li><a href="/bookings.html">Bookings</a></li>
+    </ul>
+</div>
+
+<div class="footerbottom">
+    <p> Copyright & copy;2022</p>
+</div>
+</div>
+</html>
